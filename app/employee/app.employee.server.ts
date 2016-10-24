@@ -4,8 +4,25 @@ import { Employee } from './app.employee.model';
 
 let employees:Employee[]=[];
 let lastestId:number=0;
+const  hobbies:string[]=['徒步','足球','篮球','游戏','唱歌','阅读'];
 @Injectable()
 export class EmployeeServer{
+
+    constructor(){
+        (()=>{
+            for(let i=1;i<=5;i++){
+              let employee=new Employee();
+              lastestId=i;
+              employee.Id=i;
+              employee.Age=i+20;
+              employee.Name='Name'+i;
+              employee.Sex=i%2?'男':'女';
+              employee.Hobby=hobbies[i%6]
+              employees.push(employee); 
+            }
+        })()
+    }
+
     add=(employee:Employee)=>{
        employee.Id=++lastestId;
        employees.push(employee);

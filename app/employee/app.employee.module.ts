@@ -4,18 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { EmployeeServer} from './app.employee.server';
 import { EmployeeComponent } from './app.employee.component';
- 
+import { EmployeeDetailComponent } from './app.employee-detail.component';
+import { EmployeeRouter } from './app.employee.router'; 
  
 @NgModule({
     imports:[
         FormsModule,
-        CommonModule
+        CommonModule,
+        EmployeeRouter
     ],
     declarations:[
         EmployeeComponent,
+        EmployeeDetailComponent
     ],
     exports:[
-        EmployeeComponent
+        
     ],
     providers:[
         EmployeeServer

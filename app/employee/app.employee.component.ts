@@ -1,48 +1,35 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import{ Employee } from './app.employee.model';
 import { EmployeeServer} from './app.employee.server';
 @Component({
     moduleId:module.id,
-    selector:'employee-detail',
+    selector:'employee-list',
     templateUrl:'app.employee.component.html',
     // providers:[EmployeeServer]
 })
 
 export class EmployeeComponent{
-      lastesIdt=0;
-      isList:boolean=false;
       hobbies:string[]=['徒步','足球','篮球','游戏','唱歌','阅读'];
-      model:Employee=new Employee();
       employees:Employee[]=[];
 
-      constructor(public employeeServer:EmployeeServer){}
-    
-      onCreate=()=>{
-          this.isList=false;
-          this.model=new Employee();
+      constructor(public employeeServer:EmployeeServer,public router:Router){}
+ 
+      onGotoDetail=(id:number)=>{
+           this.router.navigate(['/employee',id]); 
       }
       
-      onGotoDetail=(id:number)=>{
-           this.model=this.employeeServer.get(id);
-           this.isList=false;
+      onCreate=()=>{
+           this.router.navigate(['/employee-create']); 
       }
-
-      onSave=()=>{
-          this.employeeServer.add(this.model);
-          this.gotoList();
+ 
+      ngOnInit(){
+           this.employees=this.employeeServer.getList();
       }
      
-      onDelete=(id:number)=>{
+      onDelete=(id:number)=>{ 
          this.employeeServer.delete(id);
-      }
-      
-      onUpdate=()=>{
-          this.employeeServer.update(this.model);
-          this.gotoList();
+         this.employees=this.employeeServer.getList();
       }
 
-      gotoList=()=>{
-          this.isList=true;
-          this.employees=this.employeeServer.getList();
-      }
 }

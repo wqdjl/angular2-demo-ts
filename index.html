@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <base href='/'>
     <head></head>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="./node_modules/core-js/client/shim.js"></script>
@@ -17,7 +18,9 @@
       System.import('app').catch(function(err){ console.error(err); });
     </script>
     <body>
-       <my-app> </my-app>
+     <div class="container">
+         <my-app> </my-app>
+     </div>
     </body>
      
 </html>

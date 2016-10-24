@@ -1,34 +1,5 @@
- 
-<div class="container" [hidden]='isList'> 
-    {{model|json}}   
-    <div class="form-group">
-        <label for="name">name:</label>
-        <input type="text" class="from-control" id='name' [(ngModel)]='model.Name'>
-    </div>
-    <div class="form-group">
-        <label for="sex">sex:</label>
-        <label for="male" class="radio-inline"> <input type="radio" value="男" id='male'   [(ngModel)]='model.Sex'>男</label>
-        <label for="female" class="radio-inline"> <input type="radio" value="女" id="female"   [(ngModel)]='model.Sex'>女</label>
-       
-    </div> 
-    <div class="form-group">
-        <label for="age">age:</label>
-          <input type="number" class="from-control" id='age' [(ngModel)]='model.Age'>
-     
-    </div>
-    <div class="form-group">
-         <label for="hobby">hobby:</label>
-         <select name="hobby" id="hobby" class="form-control" [(ngModel)]='model.Hobby'>
-             <option *ngFor='let hobby of hobbies' [value]="hobby">{{hobby}}</option>
-         </select>
-    </div>
-     
-    <div class="form-group" [hidden]='!!model.Id'><button type="button" class="btn" (click)='onSave()'>Save</button></div>
-    <div class="form-group" [hidden]='!model.Id'>  <button type="button" class="btn" (click)='onUpdate()' >Update</button></div>
-     
-</div>
 
-<div class="container"   [hidden]='!isList'>
+ 
  <table class="table">
      <thead>
          <tr><th>Id</th><th>Name</th><th>Sex</th><th>Age</th><th>Hobby</th><th>Operate</th></tr>
@@ -46,4 +17,4 @@
      </thead>
  </table>
  <button type="button" class="btn" (click)='onCreate()'>Create</button>
-</div>
+ 

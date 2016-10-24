@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }   from './app.component';
 import { EmployeeModule } from './employee/app.employee.module';
+import { DepartmentModule } from './department/department.module';
+import { AppRouter} from './app.router';
+//import { employeeRouter } from './employee/app.employee.router';
 // import { FormsModule } from '@angular/forms';
 
 // import { EmployeeComponent } from './employee/app.employee.component';
@@ -11,7 +14,9 @@ import { EmployeeModule } from './employee/app.employee.module';
 @NgModule({
   imports:      [ 
     BrowserModule,
-    EmployeeModule
+    EmployeeModule,
+    DepartmentModule,
+    AppRouter
      ],
   declarations: [ 
     AppComponent,

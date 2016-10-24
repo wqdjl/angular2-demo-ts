@@ -1,0 +1,14 @@
+<div class="container">
+    <table class="table">
+        <tr><th>Id</th><th>Name</th><th>Remark</th><th>Operate</th></tr>
+        <tr *ngFor='let dep of departments'>
+            <td>dep.Id</td>
+            <td>dep.Name</td>
+            <td>dep.Remark</td>
+            <td><button class="btn btn-default">Update</button><button class="btn btn-default">Delete</button></td>
+        </tr>
+    </table>
+    <router-outlet>
+
+    </router-outlet>
+</div>
