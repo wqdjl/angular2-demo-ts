@@ -5,7 +5,7 @@ import { EmployeeDetailComponent } from './app.employee-detail.component';
  
 
 let routes:Routes=[
-    {path:'employee-detail',component:EmployeeDetailComponent},
+    {path:'employee-create',component:EmployeeDetailComponent},
     {path:'employee/:id',component:EmployeeDetailComponent},
     {path:'employee',component:EmployeeComponent},
     {path:'',component:EmployeeComponent},

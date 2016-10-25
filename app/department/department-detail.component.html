@@ -1,0 +1,18 @@
+{{model|json}}
+
+<form action="">
+    <label for="name">Name:</label> <input id=name type="text" name='name' [(ngModel)]='model.Name'>
+    <label for="remarl">Remark:</label> <input id=remark type="text" name='remark' [(ngModel)]='model.Remark'>
+</form>
+<span [hidden]='!model.Id' > 
+    <button class="btn btn-ok" (click)='onUpdate()'>Update</button> 
+ </span>
+<span [hidden]='!!model.Id'>
+<button class="btn btn-ok"  (click)='onSave()'>
+    Save
+</button>
+</span>
+
+<button class="btn btn-cancel" routerLink='../'>
+    Cancel
+</button>

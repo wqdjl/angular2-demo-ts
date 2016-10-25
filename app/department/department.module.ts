@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { DepartmentComponent } from './department.component';
 import { DepartmentDetailComponent } from './department-detail.component';
@@ -11,18 +11,18 @@ import { DepartmentServer } from './department.server';
 
 
 @NgModule({
-    imports:[
+    imports: [
         CommonModule,
         FormsModule,
         DepartmentRoute
     ],
-    declarations:[
+    declarations: [
         DepartmentComponent,
         DepartmentDetailComponent
     ],
-    providers:[
+    providers: [
         DepartmentServer
     ]
 })
 
-export class DepartmentModule{}
+export class DepartmentModule { }

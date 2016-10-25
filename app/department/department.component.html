@@ -1,14 +1,15 @@
-<div class="container">
+ 
+    <button class="btn" (click)='onAdd()'>Create</button>
     <table class="table">
         <tr><th>Id</th><th>Name</th><th>Remark</th><th>Operate</th></tr>
-        <tr *ngFor='let dep of departments'>
-            <td>dep.Id</td>
-            <td>dep.Name</td>
-            <td>dep.Remark</td>
-            <td><button class="btn btn-default">Update</button><button class="btn btn-default">Delete</button></td>
+        <tr *ngFor='let dep of deps'>
+            <td>{{dep.Id}}</td>
+            <td>{{dep.Name}}</td>
+            <td>{{dep.Remark}}</td>
+            <td><button class="btn btn-default" (click)='onEdit(dep.Id)'>Update</button><button class="btn btn-default" (click)='onDelete(dep.Id)'>Delete</button></td>
         </tr>
     </table>
     <router-outlet>
 
     </router-outlet>
-</div>
+ 
