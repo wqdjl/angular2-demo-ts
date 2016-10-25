@@ -1,6 +1,7 @@
 #Angular =>TS
 
 ##Question1,About angular router
+### children back to parent and refresh parent data
    父：ngOnInit() {
         this.activatedRoute.params.forEach((params:Params)=>{
              doSomething();
