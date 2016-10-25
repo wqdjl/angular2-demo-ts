@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute,Params } from '@angular/router';
 import { Department } from './department.model';
 import { DepartmentServer } from './department.server';
 
@@ -11,15 +11,18 @@ import { DepartmentServer } from './department.server';
 
 export class DepartmentComponent {
     deps: Department[];
-
+    selectId:number;
     constructor(
         public router: Router,
         public depServer: DepartmentServer,
-        public activatedRouterSnap: ActivatedRoute
+        public activatedRoute: ActivatedRoute
     ) { }
 
     ngOnInit() {
-        this.deps = this.depServer.getList();
+        this.activatedRoute.params.forEach((params:Params)=>{
+             this.selectId=params['id'];
+             this.deps = this.depServer.getList();
+        });
     }
 
     onDelete(id: number) {
@@ -28,6 +31,7 @@ export class DepartmentComponent {
     }
 
     onEdit(id: number) {
+         this.selectId=id;
         this.router.navigate(["department", id]);
     }
 

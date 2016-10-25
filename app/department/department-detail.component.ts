@@ -30,7 +30,8 @@ export class DepartmentDetailComponent {
     }
 
     gotoList() {
-        this.router.navigate(['department']);
+        this.router.navigate(['../', { id: this.id, foo: 'foo' }], { relativeTo: this.activatedRoute });
+        //this.router.navigate(['department', { id: this.id, foo: 'foo' }]);
     }
 
     onSave() {
@@ -44,6 +45,6 @@ export class DepartmentDetailComponent {
     }
 
     onCancel() {
-        this.gotoList();
+       this.router.navigate(['../', { id: this.id, foo: 'foo' }], { relativeTo: this.activatedRoute });
     }
 }

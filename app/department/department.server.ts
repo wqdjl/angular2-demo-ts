@@ -7,7 +7,6 @@ let lastId = 0;
 export class DepartmentServer {
     constructor() {
         for (let i = 1; i <= 3; i++) {
-
             let dep = new Department();
             dep.Id = lastId = i;
             dep.Name = 'Dep-' + i;
