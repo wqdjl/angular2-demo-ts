@@ -5,6 +5,7 @@ import { AppComponent }   from './app.component';
 import { EmployeeModule } from './employee/app.employee.module';
 import { DepartmentModule } from './department/department.module';
 import { AppRouter} from './app.router';
+import { HighlightDirectieve } from './common/highlight.directive';
 //import { employeeRouter } from './employee/app.employee.router';
 // import { FormsModule } from '@angular/forms';
 
@@ -19,7 +20,7 @@ import { AppRouter} from './app.router';
     AppRouter
      ],
   declarations: [ 
-    AppComponent,
+    AppComponent
      ],
   bootstrap:    [ AppComponent ]
 })

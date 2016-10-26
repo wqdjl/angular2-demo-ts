@@ -3,7 +3,7 @@
  <table class="table">
      <thead>
          <tr><th>Id</th><th>Name</th><th>Sex</th><th>Age</th><th>Hobby</th><th>Operate</th></tr>
-         <tr *ngFor='let employee of employees'>
+         <tr *ngFor='let employee of employees' [hightlight]="'gray'" [defaultColor]='"red"'>
            <td>{{employee.Id}}</td> 
            <td>{{employee.Name}}</td>
            <td>{{employee.Sex}}</td>

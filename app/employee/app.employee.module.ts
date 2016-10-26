@@ -7,6 +7,9 @@ import { EmployeeComponent } from './app.employee.component';
 import { EmployeeDetailComponent } from './app.employee-detail.component';
 import { EmployeeRouter } from './app.employee.router'; 
  
+import { HighlightDirectieve } from '../common/highlight.directive';
+
+
 @NgModule({
     imports:[
         FormsModule,
@@ -15,7 +18,8 @@ import { EmployeeRouter } from './app.employee.router';
     ],
     declarations:[
         EmployeeComponent,
-        EmployeeDetailComponent
+        EmployeeDetailComponent,
+        HighlightDirectieve
     ],
     exports:[
         

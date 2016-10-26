@@ -1,8 +1,8 @@
  
     <button class="btn" (click)='onAdd()'>Create</button>
     <table class="table">
-        <tr><th>Id</th><th>Name</th><th>Remark</th><th>Operate</th></tr>
-        <tr *ngFor='let dep of deps'>
+        <tr ><th>Id</th><th>Name</th><th>Remark</th><th>Operate</th></tr>
+        <tr  *ngFor='let dep of deps' >
             <td>{{dep.Id}}</td>
             <td>{{dep.Name}}</td>
             <td>{{dep.Remark}}</td>
