@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }   from './app.component';
 import { EmployeeModule } from './employee/app.employee.module';
-import { DepartmentModule } from './department/department.module';
+//import { DepartmentModule } from './department/department.module';
 import { AppRouter} from './app.router';
 import { HighlightDirectieve } from './common/highlight.directive';
 //import { employeeRouter } from './employee/app.employee.router';
@@ -16,7 +16,7 @@ import { HighlightDirectieve } from './common/highlight.directive';
   imports:      [ 
     BrowserModule,
     EmployeeModule,
-    DepartmentModule,
+    //DepartmentModule,
     AppRouter
      ],
   declarations: [ 

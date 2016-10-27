@@ -11,3 +11,5 @@
   子2：this.router.navigate(['department', {带任何的json参数 }])、
        返回到父级路由，父级doSometthing才会每次调用
    
+##Question 2, About lazy loaded 
+ add  '{ path: '{router name}', loadChildren: '{module path}}#{module name}' }' to root router, and the module router root path replace "" with 'router name'

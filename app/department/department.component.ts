@@ -28,6 +28,7 @@ export class DepartmentComponent {
     onDelete(id: number) {
         this.depServer.delete(id);
         this.deps = this.depServer.getList();
+        
     }
 
     onEdit(id: number) {

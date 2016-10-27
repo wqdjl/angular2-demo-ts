@@ -7,7 +7,7 @@ import { DepartmentDetailComponent } from './department-detail.component';
 //     {path:'department/:id',component:DepartmentComponent},
 const routes: Routes = [
     {
-        path: "department",
+        path: "",
         component: DepartmentComponent,
         children: [
             { path: 'create', component: DepartmentDetailComponent },
