@@ -5,9 +5,9 @@ import { EmployeeDetailComponent } from './app.employee-detail.component';
 import { AuthServer } from '../share/auth.server';
 
 let routes:Routes=[
-    {path:'employee-create', canActivate:[AuthServer],component:EmployeeDetailComponent},
-    {path:'employee/:id', canActivate:[AuthServer],component:EmployeeDetailComponent},
-    {path:'employee', canActivate:[AuthServer],component:EmployeeComponent},
+    {path:'create', canActivate:[AuthServer],component:EmployeeDetailComponent},
+    {path:':id', canActivate:[AuthServer],component:EmployeeDetailComponent},
+    {path:'', canActivate:[AuthServer],component:EmployeeComponent},
    
 ];
 

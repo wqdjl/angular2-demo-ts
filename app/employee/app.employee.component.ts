@@ -20,7 +20,7 @@ export class EmployeeComponent{
       }
       
       onCreate=()=>{
-           this.router.navigate(['/employee-create']); 
+           this.router.navigate(['/employee/create']); 
       }
  
       ngOnInit(){

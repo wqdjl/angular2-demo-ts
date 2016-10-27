@@ -13,7 +13,7 @@ import { Component404 } from './404/404.component';
   imports: [
     BrowserModule,
     ShareModule,
-    EmployeeModule,
+    //EmployeeModule,
     AppRouter
   ],
   exports:[

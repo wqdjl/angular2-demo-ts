@@ -3,7 +3,7 @@ import { CanActivate,Router,ActivatedRouteSnapshot,RouterStateSnapshot } from '@
 
 @Injectable()
 export class AuthServer implements CanActivate {
-    isLogin: boolean = false;
+    isLogin: boolean = true;
     redirectUrl:string;
 
     constructor(private router:Router){
