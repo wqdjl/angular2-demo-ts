@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+
+import { ShareModule } from '../share/share.module';
+
 
 import { DepartmentComponent } from './department.component';
 import { DepartmentDetailComponent } from './department-detail.component';
@@ -12,8 +13,7 @@ import { DepartmentServer } from './department.server';
 
 @NgModule({
     imports: [
-        CommonModule,
-        FormsModule,
+        ShareModule,
         DepartmentRoute
     ],
     declarations: [
