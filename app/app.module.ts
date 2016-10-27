@@ -7,6 +7,8 @@ import { EmployeeModule } from './employee/app.employee.module';
 import { AppRouter } from './app.router';
 import { ShareModule } from './share/share.module';
 
+import { LoginComponent } from './login/login.component';
+import { Component404 } from './404/404.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -14,7 +16,14 @@ import { ShareModule } from './share/share.module';
     EmployeeModule,
     AppRouter
   ],
-  declarations: [AppComponent],
+  exports:[
+   
+  ],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    Component404
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

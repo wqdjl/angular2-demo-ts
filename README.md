@@ -12,3 +12,7 @@
    
 ##Question 2, About lazy loaded 
  add  '{ path: '{router name}', loadChildren: '{module path}}#{module name}' }' to root router, and the module router root path replace 'router name' with "" <br />
+
+ ##Question 3，About load server
+ 3.1Just load one times and other module can use it <br/>
+ 3.2多次引用会产生多个实例？
