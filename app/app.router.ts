@@ -2,7 +2,7 @@ import { Route,Router,RouterModule,Routes } from '@angular/router';
 import { EmployeeComponent } from './employee/app.employee.component';
 import { LoginComponent } from './login/login.component';
 import { Component404 } from './404/404.component';
-import { AuthServer } from './share/auth.server';
+import { AuthServer } from './core/auth.server';
 
 let routes:Routes=[
     // {path:'employee-create',component:EmployeeDetailComponent},

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthServer } from '../share/auth.server';
+import { AuthServer } from '../core/auth.server';
 
 @Component({
     moduleId:module.id,

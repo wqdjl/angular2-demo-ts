@@ -2,7 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import {Router,RouterModule,Routes} from '@angular/router';
 import { EmployeeComponent } from './app.employee.component';
 import { EmployeeDetailComponent } from './app.employee-detail.component';
-import { AuthServer } from '../share/auth.server';
+import { AuthServer } from '../core/auth.server';
 
 let routes:Routes=[
     {path:'create', canActivate:[AuthServer],component:EmployeeDetailComponent},

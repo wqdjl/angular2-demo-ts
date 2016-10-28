@@ -2,23 +2,28 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { EmployeeModule } from './employee/app.employee.module';
-
+ 
 import { AppRouter } from './app.router';
 import { ShareModule } from './share/share.module';
 
+import { CoreModule } from './core/core.module';
+
 import { LoginComponent } from './login/login.component';
 import { Component404 } from './404/404.component';
+
 @NgModule({
   imports: [
     BrowserModule,
     ShareModule,
-    //EmployeeModule,
+    CoreModule,
     AppRouter
   ],
   exports:[
    
   ],
+   providers: [
+        
+    ],
   declarations: [
     AppComponent,
     LoginComponent,

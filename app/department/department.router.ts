@@ -2,7 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DepartmentComponent } from './department.component';
 import { DepartmentDetailComponent } from './department-detail.component';
-import { AuthServer } from '../share/auth.server';
+import { AuthServer } from '../core/auth.server';
 //   {path:'department-create',component:DepartmentComponent},
 //     {path:'department/:id',component:DepartmentComponent},
 const routes: Routes = [

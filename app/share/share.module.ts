@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AuthServer } from './auth.server';
+ 
 import { HighlightDirectieve } from './highlight.directive';
 
 
@@ -13,9 +13,7 @@ import { HighlightDirectieve } from './highlight.directive';
         HighlightDirectieve
 
     ],
-    providers: [
-        AuthServer
-    ],
+   
     exports: [
         FormsModule,
         CommonModule,
