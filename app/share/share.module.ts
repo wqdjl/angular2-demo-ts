@@ -19,8 +19,7 @@ import { HighlightDirectieve } from './highlight.directive';
     exports: [
         FormsModule,
         CommonModule,
-        HighlightDirectieve,
-        // AuthServer
+        HighlightDirectieve
     ]
 })
 export class ShareModule {
