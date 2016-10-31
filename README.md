@@ -30,3 +30,6 @@
 
 ##Why add CoreModule
  1、应用启动时加载的那些服务创建一个带 providers 的 CoreModule并且只能在根模块 AppModule 中导入 CoreModule，避免providers里面的server产生多个实例
+
+##About 生命周期
+ 1、每次组件有更新或者更改的时候都会调用都次生命周期的方法去检测，这是否会增加相应的性能开销
