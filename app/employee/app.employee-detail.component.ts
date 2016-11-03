@@ -32,6 +32,10 @@ export class EmployeeDetailComponent{
           this.gotoList();
       }
 
+      onCancel=()=>{
+          this.gotoList();
+      }
+      
       gotoList=()=>{
          this.router.navigate(['/employee']);
       }

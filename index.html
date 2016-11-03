@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <base href='/'>
-    <head></head>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
-    <script src="./node_modules/core-js/client/shim.js"></script>
-    <script src="./node_modules/rxjs/bundles/rx.js"></script>
-  
-    
-    <script src="./node_modules/zone.js/dist/zone.js"></script>
-    <script src="./node_modules/reflect-metadata/reflect.js"></script>
-   
-    <script src="./node_modules/systemjs/dist/system.js"></script>
-   
-     <!--  Configure SystemJS -->
-    <script src="systemjs.config.js"></script>
-    <script>
+<base href='/'>
+
+<head></head>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+<script src="./node_modules/core-js/client/shim.js"></script>
+<script src="./node_modules/rxjs/bundles/rx.js"></script>
+
+
+<script src="./node_modules/zone.js/dist/zone.js"></script>
+<script src="./node_modules/reflect-metadata/reflect.js"></script>
+
+<script src="./node_modules/systemjs/dist/system.js"></script>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<!--  Configure SystemJS -->
+<script src="systemjs.config.js"></script>
+<script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>
-    <body>
-     <div class="container">
-         <my-app> </my-app>
-     </div>
-    </body>
-     
+
+<body>
+	<my-app> </my-app>
+
+</body>
+
 </html>
