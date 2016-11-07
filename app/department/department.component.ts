@@ -27,13 +27,15 @@ export class DepartmentComponent {
 
     onDelete(id: number) {
         this.depServer.delete(id);
+        if(this.selectId==id){
+             this.router.navigate(["department"]);
+        } 
         this.deps = this.depServer.getList();
-        
     }
 
     onEdit(id: number) {
          this.selectId=id;
-        this.router.navigate(["department", id]);
+         this.router.navigate(["department", id]);
     }
 
     onAdd() {

@@ -1,12 +1,16 @@
 //本module主要是用来引用只需注入一次的server，
 //最好放在app.module 在app.module里面注入
 import { NgModule,SkipSelf,Optional } from '@angular/core'; 
+import { AuthServer } from './auth.server';
+import { ApiServer } from './api.server';
 
-import { AuthServer } from './auth.server.js';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch'; 
+import 'rxjs/add/operator/toPromise';
 
 @NgModule({
     imports:[],
-    providers:[AuthServer]
+    providers:[AuthServer,ApiServer]
 })
 export class CoreModule{
     /*@SkipSel 依赖的解析从父级注入器开始

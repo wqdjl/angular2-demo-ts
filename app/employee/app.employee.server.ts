@@ -13,7 +13,7 @@ export class EmployeeServer{
             for(let i=1;i<=5;i++){
               let employee=new Employee();
               lastestId=i;
-              employee.Id=i;
+              employee.id=i;
               employee.Age=i+20;
               employee.Name='Name'+i;
               employee.Sex=i%2?'男':'女';
@@ -24,13 +24,13 @@ export class EmployeeServer{
     }
 
     add=(employee:Employee)=>{
-       employee.Id=++lastestId;
+       employee.id=++lastestId;
        employees.push(employee);
     }
 
     get=(id:number)=>{
         return employees.find((employee)=>{
-           return employee.Id==id;
+           return employee.id==id;
         })
     }
 
@@ -40,14 +40,14 @@ export class EmployeeServer{
     
     delete=(id:number)=>{
         let index=employees.findIndex((employee)=>{
-            return employee.Id==id;
+            return employee.id==id;
         })
         employees.splice(index,1);
     }
 
     update=(employee:Employee)=>{
          let index=employees.findIndex((em)=>{
-            return em.Id==employee.Id;
+            return em.id==employee.id;
         })
         employees.splice(index,1,employee);
     }

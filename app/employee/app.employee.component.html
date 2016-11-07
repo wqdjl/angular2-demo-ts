@@ -4,14 +4,14 @@
      <thead>
          <tr><th>Id</th><th>Name</th><th>Sex</th><th>Age</th><th>Hobby</th><th>Operate</th></tr>
          <tr *ngFor='let employee of employees' [hightlight]="'gray'" [defaultColor]='"red"'>
-           <td>{{employee.Id}}</td> 
+           <td>{{employee.id}}</td> 
            <td>{{employee.Name}}</td>
            <td>{{employee.Sex}}</td>
            <td>{{employee.Age}}</td>
            <td>{{employee.Hobby}}</td>    
            <td  >
-            <button type="button" class="btn" (click)='onGotoDetail(employee.Id)'>Detail</button>
-            <button type="button" class="btn" (click)='onDelete(employee.Id)'>Delete</button>
+            <button type="button" class="btn" (click)='onGotoDetail(employee.id)'>Detail</button>
+            <button type="button" class="btn" (click)='onDelete(employee.id)'>Delete</button>
            </td>  
          </tr>
      </thead>

@@ -9,10 +9,7 @@
 	<div class="form-group">
 		<label for="headFile" class="col-sm-1">Head:</label>
 		<div  class="col-sm-11">
-			<label 	[hidden]='!model.Head'>
-				<img [src]="model.Head" alt="" >
-			</label>
-			
+		 
 			<input name='file' id='headFile' type="file" (change)="fileChange($event)">
 		</div>
 	</div>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Employee } from './app.employee.model';
 import { EmployeeServer } from './app.employee.server';
-
+import { ApiServer } from '../core/api.server.js';
 @Component({
     moduleId: module.id,
     selector: 'employee-detail',
@@ -15,19 +15,23 @@ export class EmployeeDetailComponent {
     employees: Employee[] = [];
     id: number;
 
-    constructor(public employeeServer: EmployeeServer, public router: Router, public activatedRoute: ActivatedRoute) { }
+    constructor(
+        public employeeServer: EmployeeServer,
+        public router: Router,
+        public activatedRoute: ActivatedRoute,
+        private apiServer: ApiServer) { }
 
     fileChange = (event) => {
-        let url=event.srcElement.value;
-        let urlArray=url.split('.');
-        let outputFormat=urlArray[urlArray.length-1];
-        let canvas:HTMLCanvasElement =<HTMLCanvasElement>document.createElement('CANVAS');
+        let url = event.srcElement.value;
+        let urlArray = url.split('.');
+        let outputFormat = urlArray[urlArray.length - 1];
+        let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.createElement('CANVAS');
         let ctx = canvas.getContext('2d');
         let img = new Image;
-       
+
         img.crossOrigin = 'Anonymous';
-        img.onload =  ()=> {
-             //Not allowed to load local resource.how can i resolve it?
+        img.onload = () => {
+            //Not allowed to load local resource.how can i resolve it?
             canvas.height = img.height;
             canvas.width = img.width;
             ctx.drawImage(img, 0, 0);
@@ -39,6 +43,7 @@ export class EmployeeDetailComponent {
     }
 
     onSave = () => {
+       // this.apiServer.addEmployee(this.model).subscribe();
         this.employeeServer.add(this.model);
         this.gotoList();
     }

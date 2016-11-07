@@ -3,22 +3,22 @@ import { CanActivate, CanLoad, Route, Router, ActivatedRouteSnapshot, RouterStat
 
 @Injectable()
 export class AuthServer implements CanActivate, CanLoad {
-    isLogin:boolean;
-    redirectUrl:string;
-    // set isLogin(value:boolean) {
-    //    localStorage.setItem('isLogin',value.toString());
-    // }
-    // get isLogin():boolean{
-    //     let _isLogin:string=  localStorage.getItem('isLogin');
-    //     return _isLogin==="true";
-    // } 
+    // isLogin:boolean;
+    // redirectUrl:string;
+    set isLogin(value:boolean) {
+       localStorage.setItem('isLogin',value.toString());
+    }
+    get isLogin():boolean{
+        let _isLogin:string=  localStorage.getItem('isLogin');
+        return _isLogin==="true";
+    } 
    
-    // set redirectUrl(value:string){
-    //     localStorage.setItem('redirectUrl',value);
-    // }  
-    // get redirectUrl():string{
-    //     return localStorage.getItem('redirectUrl');
-    // }
+    set redirectUrl(value:string){
+        localStorage.setItem('redirectUrl',value);
+    }  
+    get redirectUrl():string{
+        return localStorage.getItem('redirectUrl');
+    }
 
 
     constructor(private router: Router) {
@@ -58,7 +58,7 @@ export class AuthServer implements CanActivate, CanLoad {
 
     logout() {
         this.isLogin = false;
-         this.redirectUrl = "";
+        this.redirectUrl = "";
         this.router.navigate(['/login']);
     }
 
