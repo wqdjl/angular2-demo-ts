@@ -12,8 +12,13 @@ const routes: Routes = [
         children: [
             { path: 'create', component: DepartmentDetailComponent },
             { path: ':id', component: DepartmentDetailComponent },
-            { path: '', component: DepartmentDetailComponent },
+
         ]
+    },
+    {
+        path: "**",
+        component: DepartmentComponent,
+        canActivate: [AuthServer],
     }
 ];
 

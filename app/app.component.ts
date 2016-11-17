@@ -12,13 +12,13 @@ import { AuthServer } from './core/auth.server';
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-				<a class="navbar-brand" href="javascript:void(0)">Project name</a>
+				<a class="navbar-brand" href="javascript:void(0)" routerLink="employee" routerLinkActive="active">Project name</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="javascript:void(0)" routerLink="employee" routerLinkActive="active">Employee</a></li>
 					<li><a href="javascript:void(0)" routerLink="department" routerLinkActive="active">Department</a></li>
-						<li><a href="javascript:void(0)" routerLink="login" routerLinkActive="active">login</a></li>
+					 
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li>
