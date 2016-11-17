@@ -1,4 +1,4 @@
-import { ModuleWithProviders } from '@angular/core';
+import { NgModule,ModuleWithProviders } from '@angular/core';
 import {Router,RouterModule,Routes} from '@angular/router';
 import { EmployeeComponent } from './app.employee.component';
 import { EmployeeDetailComponent } from './app.employee-detail.component';
@@ -11,4 +11,12 @@ let routes:Routes=[
    
 ];
 
-export const EmployeeRouter:ModuleWithProviders=RouterModule.forChild(routes);
+const EmployeeRouter:ModuleWithProviders=RouterModule.forChild(routes);
+
+@NgModule({
+    imports:[
+       EmployeeRouter 
+    ],
+    exports:[RouterModule]
+})
+export class EmployeeRouterModule{}
