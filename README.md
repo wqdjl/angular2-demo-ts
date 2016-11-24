@@ -1,5 +1,8 @@
 #Angular =>TS
 
+##About Forms
+### form 标签里面的表单元素 双向绑定数据则需要添加 name属性否则会报错
+
 ##About angular router
 ### children back to parent and refresh parent data
    父：ngOnInit() {
@@ -22,7 +25,7 @@
  
 
 ##About load server
- 1、Just load one times and other module can use it
+ 1、Just only need  load one times and other module can use it
  
  2、惰性加载导致server会产生多个实例？ 
 
@@ -83,6 +86,6 @@
 ##About npm install error "UNMET PEER DEPENDENCY XXXX"
   需要重新install当前的安装包，用提示的版本
 
-##Webpack and 惰性加载不兼容？
+##Webpack and 惰性加载不兼容？？
  
   
